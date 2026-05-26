@@ -1,4 +1,4 @@
-nbimport os
+import os
 import requests
 
 # Dossier de destination
