@@ -1,0 +1,34 @@
+import os
+import requests
+
+# Dossier de destination
+OUTPUT_DIR = "bibliotheque_shakespeare"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+# Œuvres de Shakespeare disponibles sur Project Gutenberg
+works = {
+    "Hamlet": "https://www.gutenberg.org/cache/epub/1524/pg1524.txt",
+    "Macbeth": "https://www.gutenberg.org/cache/epub/1533/pg1533.txt",
+    "Othello": "https://www.gutenberg.org/cache/epub/1531/pg1531.txt",
+    "King Lear": "https://www.gutenberg.org/cache/epub/1532/pg1532.txt",
+    "Romeo and Juliet": "https://www.gutenberg.org/cache/epub/1513/pg1513.txt",
+    "Julius Caesar": "https://www.gutenberg.org/cache/epub/1522/pg1522.txt",
+    "A Midsummer Night's Dream": "https://www.gutenberg.org/cache/epub/1514/pg1514.txt",
+    "The Tempest": "https://www.gutenberg.org/cache/epub/23042/pg23042.txt",
+    "Much Ado About Nothing": "https://www.gutenberg.org/cache/epub/1519/pg1519.txt",
+    "Twelfth Night": "https://www.gutenberg.org/cache/epub/1526/pg1526.txt",
+}
+
+for title, url in works.items():
+    print(f"Téléchargement : {title}")
+
+    response = requests.get(url)
+    response.raise_for_status()
+
+    filename = f"{title}.txt".replace("/", "-")
+    path = os.path.join(OUTPUT_DIR, filename)
+
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(response.text)
+
+print("\nBibliothèque Shakespeare créée avec succès.")
