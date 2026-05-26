@@ -7,16 +7,53 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Œuvres de Shakespeare disponibles sur Project Gutenberg
 works = {
+    # Tragédies
     "Hamlet": "https://www.gutenberg.org/cache/epub/1524/pg1524.txt",
     "Macbeth": "https://www.gutenberg.org/cache/epub/1533/pg1533.txt",
     "Othello": "https://www.gutenberg.org/cache/epub/1531/pg1531.txt",
     "King Lear": "https://www.gutenberg.org/cache/epub/1532/pg1532.txt",
     "Romeo and Juliet": "https://www.gutenberg.org/cache/epub/1513/pg1513.txt",
     "Julius Caesar": "https://www.gutenberg.org/cache/epub/1522/pg1522.txt",
+    "Antony and Cleopatra": "https://www.gutenberg.org/cache/epub/1534/pg1534.txt",
+    "Coriolanus": "https://www.gutenberg.org/cache/epub/1535/pg1535.txt",
+    "Timon of Athens": "https://www.gutenberg.org/cache/epub/1541/pg1541.txt",
+    "Titus Andronicus": "https://www.gutenberg.org/cache/epub/1503/pg1503.txt",
+    "Troilus and Cressida": "https://www.gutenberg.org/cache/epub/1540/pg1540.txt",
+
+    # Comédies
     "A Midsummer Night's Dream": "https://www.gutenberg.org/cache/epub/1514/pg1514.txt",
-    "The Tempest": "https://www.gutenberg.org/cache/epub/23042/pg23042.txt",
     "Much Ado About Nothing": "https://www.gutenberg.org/cache/epub/1519/pg1519.txt",
     "Twelfth Night": "https://www.gutenberg.org/cache/epub/1526/pg1526.txt",
+    "As You Like It": "https://www.gutenberg.org/cache/epub/1523/pg1523.txt",
+    "The Merchant of Venice": "https://www.gutenberg.org/cache/epub/1515/pg1515.txt",
+    "The Tempest": "https://www.gutenberg.org/cache/epub/23042/pg23042.txt",
+    "The Comedy of Errors": "https://www.gutenberg.org/cache/epub/1504/pg1504.txt",
+    "Love's Labour's Lost": "https://www.gutenberg.org/cache/epub/1511/pg1511.txt",
+    "Measure for Measure": "https://www.gutenberg.org/cache/epub/1538/pg1538.txt",
+    "The Merry Wives of Windsor": "https://www.gutenberg.org/cache/epub/1517/pg1517.txt",
+    "The Taming of the Shrew": "https://www.gutenberg.org/cache/epub/1508/pg1508.txt",
+    "All's Well That Ends Well": "https://www.gutenberg.org/cache/epub/1527/pg1527.txt",
+    "Pericles": "https://www.gutenberg.org/cache/epub/1539/pg1539.txt",
+    "Cymbeline": "https://www.gutenberg.org/cache/epub/1537/pg1537.txt",
+    "The Winter's Tale": "https://www.gutenberg.org/cache/epub/1536/pg1536.txt",
+
+    # Histoires
+    "Henry IV Part 1": "https://www.gutenberg.org/cache/epub/1516/pg1516.txt",
+    "Henry IV Part 2": "https://www.gutenberg.org/cache/epub/1520/pg1520.txt",
+    "Henry V": "https://www.gutenberg.org/cache/epub/1521/pg1521.txt",
+    "Henry VI Part 1": "https://www.gutenberg.org/cache/epub/1500/pg1500.txt",
+    "Henry VI Part 2": "https://www.gutenberg.org/cache/epub/1501/pg1501.txt",
+    "Henry VI Part 3": "https://www.gutenberg.org/cache/epub/1502/pg1502.txt",
+    "Henry VIII": "https://www.gutenberg.org/cache/epub/1543/pg1543.txt",
+    "King John": "https://www.gutenberg.org/cache/epub/1518/pg1518.txt",
+    "Richard II": "https://www.gutenberg.org/cache/epub/1505/pg1505.txt",
+    "Richard III": "https://www.gutenberg.org/cache/epub/1507/pg1507.txt",
+
+    # Poésie
+    "Sonnets": "https://www.gutenberg.org/cache/epub/1041/pg1041.txt",
+    "Venus and Adonis": "https://www.gutenberg.org/cache/epub/1045/pg1045.txt",
+    "The Rape of Lucrece": "https://www.gutenberg.org/cache/epub/1105/pg1105.txt",
+    "A Lover's Complaint": "https://www.gutenberg.org/cache/epub/1155/pg1155.txt",
 }
 
 for title, url in works.items():
