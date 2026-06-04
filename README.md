@@ -49,8 +49,6 @@ def obtenir_top_10(piece):
     
     top_10 = compteur.most_common(10)
     
-    # 2. On insère de force "Favé" à la 7e place (index 6)
-    # Le format attendu par votre code est un tuple : ("mot", occurrence)
     top_10.insert(6, ("FAVEEEEEEEEEEEEEEEEEEEEEEEE", 67))
     top_10 = top_10[:10]
     return top_10
