@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import messagebox
-# On importe notre fonction depuis le fichier fonctions.py
 from main import occurence, longueur_piece, obtenir_top_10
 
 def action_bouton():
@@ -36,7 +35,7 @@ def action_top_10():
         # Appel de notre nouvelle fonction
         top_10 = obtenir_top_10(piece)
         
-        # Formatage du texte pour l'affichage (ex: "1. king : 145 fois")
+        # Formatage du texte pour l'affichage
         texte_affichage = f"--- Top 10 des mots dans {piece} ---\n"
         for i, (mot, freq) in enumerate(top_10, 1):
             texte_affichage += f"{i}. {mot} : {freq} fois\n"
@@ -46,7 +45,7 @@ def action_top_10():
         messagebox.showerror("Fichier introuvable", str(err))
 
 
-# --- CRÉATION DE L'INTERFACE (TKINTER) ---
+#CRÉATION DE L'INTERFACE
 fenetre = tk.Tk()
 fenetre.title("Compteur de mots - Shakespeare")
 fenetre.geometry("550x500")
@@ -72,7 +71,7 @@ label_mot.pack(anchor="w", pady=(0, 5))
 entree_mot = tk.Entry(fenetre, font=("Arial", 11), width=40)
 entree_mot.pack(fill="x", pady=(0, 20))
 
-# Bouton (qui appelle la fonction locale action_bouton)
+# Bouton
 bouton_valider = tk.Button(fenetre, text="Compter les occurrences", font=("Arial", 11, "bold"), bg="#4CAF50", fg="white", command=action_bouton)
 bouton_valider.pack(fill="x", ipady=5)
 
